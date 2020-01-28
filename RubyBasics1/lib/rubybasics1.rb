@@ -14,7 +14,20 @@ def max_2_sum arr
     return arr.sort.last(2).sum
   end
 end
+
 # Part III
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  if arr.length == 1 || arr.empty?
+    return false
+  end
+  
+  for i in 0 .. arr.length-1 
+    j = i + 1
+    for j in j .. arr.length-1
+      if arr[i] + arr[j] == n
+        return true
+      end
+    end
+  end
+  return false
 end

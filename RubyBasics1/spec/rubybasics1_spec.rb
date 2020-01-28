@@ -68,5 +68,4 @@ describe 'Ruby Basics 1 Part III' do
       expect(sum_to_n?([], 0)).to be false
       expect(sum_to_n?([], 7)).to be false
     end
-  end
 end
