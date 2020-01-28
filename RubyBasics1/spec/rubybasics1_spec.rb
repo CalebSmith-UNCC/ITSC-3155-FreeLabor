@@ -46,7 +46,7 @@ describe 'Ruby Basics 1 Part II' do
 end
 
 describe 'Ruby Basics 1 Part III' do
-  describe "#sum_to_n", :disabled => true do
+  
     it "should be defined" do
       expect { sum_to_n?([1,2,3],4) }.not_to raise_error
     end
