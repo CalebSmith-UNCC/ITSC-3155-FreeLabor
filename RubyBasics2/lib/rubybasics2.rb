@@ -8,6 +8,13 @@ end
 # Part II
 def starts_with_consonant? s
   # YOUR CODE HERE
+  if s.empty? 
+    return false
+  elsif s.start_with?(/[AEIOUaeiou#]/)
+    return false
+  else
+    return true
+  end
 end
 
 # Part III
