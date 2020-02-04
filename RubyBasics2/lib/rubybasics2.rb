@@ -20,4 +20,14 @@ end
 # Part III
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  value = s.to_i()
+  if s.empty?
+    return false
+  elsif s.start_with?(/[a-zA-Z]/)
+    return false
+  elsif value%4 == 0
+    return true
+  else
+    return false
+  end
 end
