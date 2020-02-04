@@ -17,7 +17,7 @@ describe "#hello" do
   end
 end
 
-describe "#starts_with_consonant?", :disabled => true do
+describe "#starts_with_consonant?" do
   it "should be defined" do
     expect { starts_with_consonant?("d") }.not_to raise_error()#::NoMethodError)
   end
