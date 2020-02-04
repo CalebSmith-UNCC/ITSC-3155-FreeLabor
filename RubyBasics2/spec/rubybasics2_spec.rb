@@ -41,7 +41,7 @@ describe "#starts_with_consonant?" do
   end
 end
 
-describe "#binary_multiple_of_4?", :disabled => true do
+describe "#binary_multiple_of_4?" do
   it "should be defined" do
     expect { binary_multiple_of_4?("yes") }.not_to raise_error()#::NoMethodError)
   end
