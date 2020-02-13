@@ -17,7 +17,9 @@ module FunWithStrings
   end
 
   def anagram_groups
-    # your code here
+    newS = self.downcase.split
+    solution = newS.group_by {|x| x.chars.sort}.values
+    return solution
   end
 end
 
