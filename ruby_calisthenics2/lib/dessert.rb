@@ -28,7 +28,11 @@ class Dessert
   end
   def delicious?
     # your code here
-    true
+    if(@flavor == "licorice" || @flavor == "licorice jelly bean")
+      return false
+    else
+      return true
+    end
   end
 end
 
