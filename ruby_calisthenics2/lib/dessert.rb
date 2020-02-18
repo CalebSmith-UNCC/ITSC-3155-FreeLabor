@@ -36,5 +36,16 @@ class JellyBean < Dessert
   # add code for setters and getters
   def initialize(flavor)
     # your code here
+    @flavor = flavor
+    @name = flavor + " jelly bean" 
+    @calories = 5
   end
+   #getter and setter for flavor
+  def flavor=(flavor)
+  @flavor = flavor
+  end
+  def flavor
+    @flavor
+  end
+  
 end
