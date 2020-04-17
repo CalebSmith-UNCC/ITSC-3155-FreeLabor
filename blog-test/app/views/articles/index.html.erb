@@ -1,12 +1,12 @@
 <h1>Free Labor</h1>
 <h2>Welcome to Free Labor!</h2>
-<%= link_to 'New article', new_article_path %>
 
 <%= form_tag(articles_path, method: :get) do %>
   <%= text_field_tag :text %>
   <%= submit_tag 'Search', name: nil %>
 <% end %>
 
+<%= link_to 'New article', new_article_path %>
 <main>
   <div class="container">
     <table>
