@@ -4,8 +4,20 @@
 h1 {
     font-size: 32px;
     color: Blue;
+    text-align: center;
+}
+h2 {
+    text-align: center;
 }
 
 body {
     background: #33DCE0;
+}
+
+main {
+    text-align: center;
+}
+
+.container {
+    display: inline-block;
 }

@@ -1,28 +1,33 @@
-<h1>Listing articles</h1>
+<h1>Free Labor</h1>
+<h2>Welcome to Free Labor!</h2>
 <%= link_to 'New article', new_article_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th>Author</th>
-  </tr>
+<main>
+  <div class="container">
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Text</th>
+        <th>Author</th>
+      </tr>
  
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.text %></td>
       
-      <td><% if article.user %>
-        <%= article.user.name %>
-        <% end %>
-      </td>
+          <td><% if article.user %>
+            <%= article.user.name %>
+            <% end %>
+          </td>
       
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', 
-                article_path(article), 
-                method: :delete, 
-                data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+          <td><%= link_to 'Show', article_path(article) %></td>
+          <td><%= link_to 'Edit', edit_article_path(article) %></td>
+          <td><%= link_to 'Destroy', 
+                    article_path(article), 
+                    method: :delete, 
+                    data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</main>
