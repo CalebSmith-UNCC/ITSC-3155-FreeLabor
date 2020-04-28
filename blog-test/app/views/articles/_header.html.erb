@@ -1,0 +1,20 @@
+<header>
+    <h1>Free Labor</h1>
+
+    <div class="trContainer">
+        <%= form_tag(articles_path, method: :get) do %>
+          <%= text_field_tag :text %>
+          <%= submit_tag 'Search', name: nil %>
+        <% end %>
+
+        <p>
+            <% if current_user %>
+                Logged in as <%= current_user.name %>
+                <%= link_to "Log Out", logout_path %>
+            <% else %>
+                <%= link_to "Sign Up", signup_path %> or
+                <%= link_to "Log In", login_path %>
+            <% end %>
+        </p>
+    </div>
+</header>

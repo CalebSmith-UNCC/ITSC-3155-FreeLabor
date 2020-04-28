@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+ 
+ header {
+     margin-bottom: 10%
+ }
+
+.trContainer {
+    display: inline-block;
+    float: right;
+    width: 30%;
+}
+
+.trContainer input[type=text] {
+    width: 33%;
+    padding: 5px 5px;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+    float: left;
+    margin: 0px 5px;
+}
+
+.trContainer input[type=button], input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    float: left;
+    margin: 0px 5px;
+}

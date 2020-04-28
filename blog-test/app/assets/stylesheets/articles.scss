@@ -1,6 +1,14 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+    text-align: center
+}
+
+.container table {
+    display: inline-block;
+}
+
 input[type=text] {
     width: 50%;
     padding: 12px 12px;
@@ -19,7 +27,6 @@ textarea {
 
 input[type=button], input[type=submit] {
     background-color: #4CAF50;
-    float: right;
     border: none;
     color: white;
     padding: 16px 20px;
