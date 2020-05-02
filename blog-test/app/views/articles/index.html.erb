@@ -29,5 +29,7 @@
       <% end %>
     </table>
   </div>
+  <%= link_to 'Home', articles_path %>
   <%= link_to 'New article', new_article_path %>
+  <%= link_to 'Sort', articles_path(order: "title") %>
 </main>

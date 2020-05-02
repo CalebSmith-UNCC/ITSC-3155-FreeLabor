@@ -4,10 +4,11 @@ class ArticlesController < ApplicationController
     end 
     
     def index
+        @articles = Article.all
         if params[:text]
             @articles = Article.where("text LIKE ? OR title LIKE ?", "%#{params[:text]}%", "%#{params[:text]}%")
-        else
-            @articles = Article.all
+        elsif params[:order]
+            @articles = Article.order('title ASC')
         end
     end
     
