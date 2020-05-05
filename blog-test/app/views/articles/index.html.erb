@@ -4,8 +4,8 @@
   <div class="container">
     <table>
       <tr>
-        <th>Title</th>
-        <th>Text</th>
+        <th>All Titles</th>
+        <th>All Text</th>
         <th>Author</th>
       </tr>
  
@@ -26,6 +26,33 @@
                     method: :delete, 
                     data: { confirm: 'Are you sure?' } %></td>
         </tr>
+      <% end %>
+    </table>
+    </div>
+    <div class="container">
+    <table>
+      <tr>
+        <th>Your Title</th>
+        <th>Your Text</th>
+      </tr>
+ 
+      <% @articles.each do |article| %>
+        <tr>
+          <% if article.user == current_user %>
+            <td><%= article.title %></td>
+            <td><%= article.text %></td>
+      
+        
+          </td>
+      
+            <td><%= link_to 'Show', article_path(article) %></td>
+            <td><%= link_to 'Edit', edit_article_path(article) %></td>
+            <td><%= link_to 'Destroy', 
+                      article_path(article), 
+                      method: :delete, 
+                      data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
       <% end %>
     </table>
   </div>
