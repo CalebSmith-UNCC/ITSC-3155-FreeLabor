@@ -37,5 +37,5 @@
     <%= f.submit %>
   </p>
 <% end %>
-
+<%= button_to 'Like', post_likes_path(@post), method: :post %>
 <%= link_to 'Article List', articles_path %>
