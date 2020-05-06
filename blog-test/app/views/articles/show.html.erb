@@ -5,6 +5,14 @@
   <%= @article.title %>
 </p>
  
+
+<p>
+  <% if @article.image.attached? %>
+  <strong>Image:</strong><br>
+    <image src="<%=(url_for(@article.image))%>"></image>
+<% end %>
+</p>
+
 <p>
   <strong>Text:</strong>
   <%= @article.text %>
