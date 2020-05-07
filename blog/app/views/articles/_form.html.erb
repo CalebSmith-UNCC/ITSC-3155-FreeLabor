@@ -25,7 +25,11 @@
   </p>
  
   <p>
-    <%= f.submit %>
+    <% f.label "Image Upload" %>
+    <%= f.file_field :image %><br>
+    <br>
+    <%= f.submit %><br>
+    <br>
   </p>
  
 <% end %>

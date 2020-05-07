@@ -1,40 +1,62 @@
-<p>
-    <strong>Title:</strong>
-    <%= @article.title %>
-</p>
+<%= render 'header' %>
 
 <p>
-    <strong>Text:</strong>
-    <%= @article.text %>
+  <strong>Title:</strong>
+  <%= @article.title %>
 </p>
+<p>
+  <Strong>Posted:</Strong>
+  <%= time_ago_in_words(@article.created_at)%>
+</p>
+ 
 
+<p>
+  <% if @article.image.attached? %>
+  <strong>Image:</strong><br>
+    <image src="<%=(url_for(@article.image))%>"></image>
+<% end %>
+</p>
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
 
 <h2>Comments</h2>
 <% @article.comments.each do |comment| %>
-<p>
+  <p>
     <strong>Commenter:</strong>
     <%= comment.commenter %>
-</p>
-<p>
+  </p>
+ 
+  <p>
     <strong>Comment:</strong>
-    <%= comment.body %>
-</p>
+    <%= comment.body %> <br>
+  </p>
+  <p>
+    <Strong>Posted</Strong>
+    <%= time_ago_in_words(comment.created_at)%>
+  </p>
+  
+  <p>
+    <td><%= link_to 'Destroy Comment', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' }, class: "button" %></td>
+  </p>
+  <br>
 <% end %>
 
-<h2>Add a Comment</h2>
-<%= form_for([@article,@article.comments.build]) do |f| %>
-<p>
+<h2>Add a comment:</h2>
+<%= form_for([@article, @article.comments.build]) do |f| %>
+  <p>
     <%= f.label :commenter %><br>
     <%= f.text_field :commenter %>
-</p>
-
-<p>
+  </p>
+  <p>
     <%= f.label :body %><br>
     <%= f.text_area :body %>
-</p>
-<p>
+  </p>
+  <p>
     <%= f.submit %>
-</p>
+  </p>
 <% end %>
 
-<%= link_to 'Article List', articles_path %>
+
+<%= link_to 'Article List', articles_path, class: "button" %>
