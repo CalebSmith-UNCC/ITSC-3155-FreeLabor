@@ -4,6 +4,10 @@
   <strong>Title:</strong>
   <%= @article.title %>
 </p>
+<p>
+  <Strong>Posted:</Strong>
+  <%= time_ago_in_words(@article.created_at)%>
+</p>
  
 
 <p>
@@ -12,7 +16,6 @@
     <image src="<%=(url_for(@article.image))%>"></image>
 <% end %>
 </p>
-
 <p>
   <strong>Text:</strong>
   <%= @article.text %>
@@ -27,8 +30,13 @@
  
   <p>
     <strong>Comment:</strong>
-    <%= comment.body %>
+    <%= comment.body %> <br>
   </p>
+  <p>
+    <Strong>Posted</Strong>
+    <%= time_ago_in_words(comment.created_at)%>
+  </p>
+  <br>
 <% end %>
 
 <h2>Add a comment:</h2>
@@ -45,5 +53,7 @@
     <%= f.submit %>
   </p>
 <% end %>
-<%= button_to 'Like', post_likes_path(@article), method: :article %>
+
+<%= button_to 'Like', article_likes_path(@article), method: :article %>
+
 <%= link_to 'Article List', articles_path %>
