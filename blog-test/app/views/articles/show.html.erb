@@ -36,6 +36,10 @@
     <Strong>Posted</Strong>
     <%= time_ago_in_words(comment.created_at)%>
   </p>
+  
+  <p>
+    <td><%= link_to 'Destroy Comment', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </p>
   <br>
 <% end %>
 
