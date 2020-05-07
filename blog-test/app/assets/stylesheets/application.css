@@ -34,12 +34,18 @@
 }
 
 .trContainer input[type=button], input[type=submit] {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 5px 10px;
+    font:  11px Arial;
     text-decoration: none;
-    cursor: pointer;
-    float: left;
-    margin: 0px 5px;
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    padding: 4px 12px 4px 12px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.trContainer input[type=button]:hover, input[type=submit]:hover {
+    background-color: #006400;
+    color: #FFFFFF;
 }
