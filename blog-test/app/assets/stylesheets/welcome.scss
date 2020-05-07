@@ -13,3 +13,34 @@ h2 {
 body {
     background: #FFFFFF;
 }
+
+.button {
+    font:  11px Arial;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    padding: 4px 12px 4px 12px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+a {
+    color: #FFFFFF;
+    
+} 
+  
+a:visited {
+    color: #FFFFFF;
+    
+} 
+a:hover {
+    background-color: #006400;
+    color: #FFFFFF;
+    
+}   
+a:active {
+    color: #FFFFFF;
+    
+}  
